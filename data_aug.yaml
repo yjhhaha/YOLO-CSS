@@ -1,9 +1,0 @@
-train: F:/data_aug/train.txt
-val: F:/data_aug/val.txt
-test: F:/data_aug/test.txt
-
-nc: 17 # 填写类别数
-
-names: ['bj_bpmh', 'bj_bpps', 'bj_wkps', 'bjdsyc','jyz_pl', 'sly_dmyw','hxq_gjbs','hxq_gjtps','xmbhyc','yw_gkxfw','yw_nc','gbps','wcaqm','wcgz','xy','ywzt_yfyc','kgg_ybh']
-
-# train,val,test的路径根据自己情况而定
