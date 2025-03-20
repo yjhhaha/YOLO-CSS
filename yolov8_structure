@@ -1,0 +1,78 @@
+// YOLOv8 Network Architecture
+digraph {
+	0 [label="输入层
+(Input)"]
+	1 [label="Conv
+(64, 3, 2)"]
+	2 [label="Conv
+(128, 3, 2)"]
+	3 [label="C2f
+(128, 3)"]
+	4 [label="Conv
+(256, 3, 2)"]
+	5 [label="C2f
+(256, 6)"]
+	6 [label="Conv
+(512, 3, 2)"]
+	7 [label="C2f
+(512, 6)"]
+	8 [label="Conv
+(1024, 3, 2)"]
+	9 [label="C2f
+(1024, 3)"]
+	10 [label="CA块
+(1024, 32)"]
+	11 [label="SPPF
+(1024, 5)"]
+	12 [label="Upsample
+(2x)"]
+	13 [label="Concat
+(P4)"]
+	14 [label="C2f
+(512, 3)"]
+	15 [label="Upsample
+(2x)"]
+	16 [label="Concat
+(P3)"]
+	17 [label="C2f
+(256, 3)"]
+	18 [label="Conv
+(256, 3, 2)"]
+	19 [label="Concat
+(Head P4)"]
+	20 [label="C2f
+(512, 3)"]
+	21 [label="Conv
+(512, 3, 2)"]
+	22 [label="Concat
+(Head P5)"]
+	23 [label="C2f
+(1024, 3)"]
+	24 [label="检测层
+(Detect)
+(P3, P4, P5)"]
+	0 -> 1
+	1 -> 2
+	2 -> 3
+	3 -> 4
+	4 -> 5
+	5 -> 6
+	6 -> 7
+	7 -> 8
+	8 -> 9
+	9 -> 10
+	10 -> 11
+	11 -> 12
+	12 -> 13
+	13 -> 14
+	14 -> 15
+	15 -> 16
+	16 -> 17
+	17 -> 18
+	18 -> 19
+	19 -> 20
+	20 -> 21
+	21 -> 22
+	22 -> 23
+	23 -> 24
+}

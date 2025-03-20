@@ -1,0 +1,9 @@
+train: D:/ultralytics-main/data/train.txt
+val: D:/ultralytics-main/data/val.txt
+test: D:/ultralytics-main/data/test.txt
+
+nc: 17 # 填写类别数
+
+names: ['bj_bpmh', 'bj_bpps', 'bj_wkps', 'bjdsyc','jyz_pl', 'sly_dmyw','hxq_gjbs','hxq_gjtps','xmbhyc','yw_gkxfw','yw_nc','gbps','wcaqm','wcgz','xy','ywzt_yfyc','kgg_ybh']
+
+# train,val,test的路径根据自己情况而定
